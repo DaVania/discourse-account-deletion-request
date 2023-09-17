@@ -1,0 +1,17 @@
+da:
+  account_deletion:
+    dropdown:
+      button_text: "Slet min konto"
+      request:
+        item_name: "Slet konto anmodning"
+        item_description: "Ønsker du at sende os en anmodning om sletning af konto?"
+      info:
+        item_name: "Mere Info"
+        item_description: "Læs mere omkring sletning af konto..."
+    modal:
+      header_title: "Sletning af konto"
+      title: "Hvordan virker det?"
+      description: "Når du sender os en anmodning om sletning af konto..."
+    pm:
+      title: "Anmodning om sletning af konto"
+      body: "Fortæl os hvorfor du ønsker at slette din konto?"
