@@ -8,7 +8,7 @@ pm_recipients:
   type: string
   default: ""
   description:
-    da: "Tilføj modtagere til sletning af konto PM. Du kan tilføje flere modtagere brugernavn eller gruppe, adskil med komma. <br> For eksempel: adminsm moderators <br> Note: Den valgte gruppe skal acceptere personlige meddelelser."
+    da: "Tilføj modtagere til sletning af konto PM. Du kan tilføje flere modtagere brugernavn eller gruppe, adskil med komma. <br> For eksempel: admins, moderators <br> Note: Den valgte gruppe skal acceptere personlige meddelelser."
     en: "Add recipients to account deletion PM. You can add multiple recipients username or group separate with comma. <br> For example: admins, moderators <br> Note: The selected group have to accept personal messages."
 dropdown_button_icon:
   type: string
