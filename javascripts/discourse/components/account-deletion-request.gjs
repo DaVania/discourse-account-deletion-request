@@ -1,9 +1,9 @@
 import { action, computed } from "@ember/object";
 import { service } from "@ember/service";
 import { classNames } from "@ember-decorators/component";
-import I18n from "I18n";
-import DropdownSelectBoxComponent from "select-kit/components/dropdown-select-box";
-import { selectKitOptions } from "select-kit/components/select-kit";
+import DropdownSelectBoxComponent from "discourse/select-kit/components/dropdown-select-box";
+import { selectKitOptions } from "discourse/select-kit/components/select-kit";
+import { i18n } from "discourse-i18n";
 import AccountDeletionModal from "../components/modal/account-deletion-modal";
 
 @classNames("account-deletion-request")
@@ -26,8 +26,8 @@ export default class AccountDeletionRequest extends DropdownSelectBoxComponent {
     const items = [
       {
         id: "more_info",
-        name: I18n.t(themePrefix("account_deletion.dropdown.info.item_name")),
-        description: I18n.t(
+        name: i18n(themePrefix("account_deletion.dropdown.info.item_name")),
+        description: i18n(
           themePrefix("account_deletion.dropdown.info.item_description")
         ),
         icon: settings.info_dropdown_item_icon,
@@ -36,10 +36,8 @@ export default class AccountDeletionRequest extends DropdownSelectBoxComponent {
     if (userCanSendPm) {
       items.push({
         id: "delete_request",
-        name: I18n.t(
-          themePrefix("account_deletion.dropdown.request.item_name")
-        ),
-        description: I18n.t(
+        name: i18n(themePrefix("account_deletion.dropdown.request.item_name")),
+        description: i18n(
           themePrefix("account_deletion.dropdown.request.item_description")
         ),
         icon: settings.request_dropdown_item_icon,
@@ -54,8 +52,8 @@ export default class AccountDeletionRequest extends DropdownSelectBoxComponent {
       case "delete_request": {
         this.composer.openNewMessage({
           recipients: settings.pm_recipients,
-          title: I18n.t(themePrefix("account_deletion.pm.title")),
-          body: I18n.t(themePrefix("account_deletion.pm.body")),
+          title: i18n(themePrefix("account_deletion.pm.title")),
+          body: i18n(themePrefix("account_deletion.pm.body")),
         });
         break;
       }
